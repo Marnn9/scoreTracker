@@ -1,0 +1,40 @@
+.teams-container {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px;
+}
+
+/* Style for each team div */
+.team {
+    flex: 1; /* Take up equal space */
+    margin: 0 20px; /* Add margin between the teams */
+    text-align: center;
+}
+
+#A{
+    background-color: rgb(218, 218, 218);
+}
+
+#B{
+    background-color: rgb(218, 218, 218);
+}
+
+.team h1{
+    font-size: 30rem;
+    margin: -5% 0.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style for buttons inside each team div */
+.team button {
+    display: inline-block; /* Ensures buttons behave like inline elements */
+    margin: 10px 2px; /* Optional: Adjusts the space between buttons */
+    width: 25px;
+
+}
+
+.team div {
+    display: flex; /* This makes the container of buttons a flex container */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 10px; /* Adds space between the buttons */
+}
