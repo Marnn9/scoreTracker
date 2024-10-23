@@ -4,10 +4,9 @@
     padding: 20px;
 }
 
-/* Style for each team div */
 .team {
-    flex: 1; /* Take up equal space */
-    margin: 0 20px; /* Add margin between the teams */
+    flex: 1; 
+    margin: 0 20px; 
     text-align: center;
 }
 
@@ -30,6 +29,9 @@
     display: inline-block; /* Ensures buttons behave like inline elements */
     margin: 10px 2px; /* Optional: Adjusts the space between buttons */
     width: 25px;
+    align-items: center;
+    border-radius: 5px;
+    border-color: rgb(201, 205, 209);
 
 }
 
