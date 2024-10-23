@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addTeam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="input">
+            <form id="teamForm">
+                <h2>Add Right Team</h2>
+                <input type="text" id="rightTeam" placeholder="Right Team Name" required>
+
+                <h2>Add Left Team</h2>
+                <input type="text" id="leftTeam" placeholder="Left Team Name" required>
+
+                <br><br>
+                <input type="submit" id="submitTeams" value="Save and Continue">
+            </form>
+        </div>
+
+        <script>
+            document.getElementById("teamForm").addEventListener("submit", function (event) {
+                event.preventDefault(); 
+
+                const rightTeam = document.getElementById("rightTeam").value;
+                const leftTeam = document.getElementById("leftTeam").value;
+
+                localStorage.setItem("teamA", rightTeam);
+                localStorage.setItem("teamB", leftTeam);
+
+                location.href = "main.html";
+            });
+        </script>
+    </body>
+
+</html>
