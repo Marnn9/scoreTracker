@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score.io</title>
-    <link rel="stylesheet" href="styles.css"></head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
     <div class="teams-container">
@@ -13,6 +14,7 @@
             <h1 class="teamAScore">0</h1>
             <div>
                 <button class="subtractA">-</button>
+                <button class="resetA">&#8634;</button>
                 <button class="addA">+</button>
             </div>
         </div>
@@ -20,22 +22,37 @@
             <h1 class="teamBScore">0</h1>
             <div>
                 <button class="subtractB">-</button>
+                <button class="resetB">&#8634;</button>
                 <button class="addB">+</button>
             </div>
         </div>
     </div>
-    <div class="teamSet">
-        <button class="subtractA">-</button>
-        <p>sett: </p>
-        <button class="addA">+</button>
-    </div>
-    <div class="teamSet">
-        <button class="subtractB">-</button>
-        <p>sett: </p>
-        <button class="addB">+</button>
-    </div>
-    <script src="score.mjs"></script>
 
+    <div class="setContainer">
+        <div class="teamSet" id="teamSetA">
+            <div class="set-controls">
+                <p id="nameA">Team A Set</p>
+                <button class="subtractSetA">-</button>
+                <p class="setScoreA">0</p>
+                <button class="addSetA">+</button>
+            </div>
+        </div>
+        <div class="teamSet" id="teamSetB">
+            <div class="set-controls">
+                <p id="nameB">Team B Set</p>
+                <button class="subtractSetB">-</button>
+                <p class="setScoreB">0</p>
+                <button class="addSetB">+</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="changeOrder">&#8644;</button>
+    <button id="newMatchBtn">New Match</button>
+    
+
+    <script src="score.mjs">
+</script>
 </body>
 
 </html>
