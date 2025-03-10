@@ -38,7 +38,6 @@ input {
     padding: 0; 
     padding: 3%;
     width: auto;
-    
 }
 
 #submitTeams:hover{
@@ -68,7 +67,7 @@ input {
 }
 
 .team h1{
-    font-size: 30rem;
+    font-size: 25rem;
     margin: -5% 0.5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

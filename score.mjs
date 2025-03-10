@@ -30,9 +30,13 @@ const teams = {
 function init() {
     const teamA = localStorage.getItem("teamA");
     const teamB = localStorage.getItem("teamB");
-    
-    if (teamA) teams.A.teamName.innerHTML = teamA;
-    if (teamB) teams.B.teamName.innerHTML = teamB;
+
+    if (teamA && teamB){
+        teams.A.teamName.innerHTML = teamA;
+        teams.B.teamName.innerHTML = teamB;
+    }else {
+        location.href = "inputTeam.html";
+    }
 
     const scoreA = localStorage.getItem("scoreA");
     const scoreB = localStorage.getItem("scoreB");
@@ -53,7 +57,7 @@ function init() {
 
 function updateScore(team, change) {
     if (team.score + change < 0) {
-        return; 
+        return;
     }
     team.score += change;
     team.scoreElement.innerHTML = team.score;
@@ -75,11 +79,11 @@ function updateSetPoints(team, change) {
     localStorage.setItem(`setPoints${team === teams.A ? 'A' : 'B'}`, team.setPoints);
 }
 
-function resetScore(team){
-    if(confirm("Are you sure you want to reset the score?")){
+function resetScore(team) {
+    if (confirm("Are you sure you want to reset the score?")) {
         team.score = 0;
         team.scoreElement.innerHTML = team.score;
-    }else{
+    } else {
         return
     }
 }
@@ -127,11 +131,11 @@ document.getElementById("changeOrder").addEventListener("click", function () {
     }
 });
 
-document.getElementById("newMatchBtn").addEventListener("click", ()=> {
-    if(confirm("Do you want to start a new match and delete all previous data?")){
+document.getElementById("newMatchBtn").addEventListener("click", () => {
+    if (confirm("Do you want to start a new match and delete all previous data?")) {
         localStorage.clear();
         location.href = "inputTeam.html";
-    }else{
+    } else {
         return;
     }
 })
