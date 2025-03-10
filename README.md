@@ -1,7 +1,7 @@
 # Score Tracker
 
 > [!NOTE]
-> Use the new match to get access to the team name input. From there on the rest should update accordingly. 
+> Use the Reset button to get access to the team name input (adding a new match). From there on the rest should update accordingly. 
 
 Left team is the team to the left court side, so its the right one when the screen is facing you. Same goes for the right. 
 Team name, score and sets are saved to localStorage so if you refresh the values will stay the same. 
